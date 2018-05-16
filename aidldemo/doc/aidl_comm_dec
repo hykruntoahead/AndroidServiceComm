@@ -1,0 +1,6 @@
+aidl 实现通信
+1.定义aidl类 实现需要方法 rebuild
+2.service内 onBinder 返回 Stub对象并实现重写方法
+3.将相同aidl文件复制到需调用的model相应位置（相同包名下），构建项目
+4.在bindService时使用的serviceConnect对象onServiceConnect方法里获取
+5.asInterface(iBinder)得到aidl对象 调用相应方法
